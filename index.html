@@ -25,7 +25,7 @@
         <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>
           Español
         </option>
-      </select>
+        </select>
         <div class="header-container__login">
           <div>
             <p class="header-container__welcome">
@@ -35,12 +35,15 @@
               alguem12@galoascience.com
             </p>
           </div>
-          <div class="header-container__notification__badge">
-            <span>
-              2
-            </span>   
-          </div>
-          <img src="/images/image.png" alt="profile image">
+
+        </div>
+        <div class="header-container__notification__badge">
+          <span>
+            2
+          </span>   
+        </div>
+        <div class="header-container__img-circle">
+          <img class="header-container__img" src="images/image.png" alt="profile image">
         </div>
       </div>
     </header>
@@ -49,8 +52,8 @@
       <header>
         <h1>slaca 2019</h1>
       </header>
-      <div>
-        <img src="/images/dewey 4.png" alt="SLACA 2019">
+      <div class="side-menu__img-logo">
+        <img src="images/dewey 4.png" alt="SLACA 2019">
       </div>
       <ul id="side-menu__bar">
         <li id="apresentacao" class="side-menu__item">
@@ -75,42 +78,79 @@
     </div>
 
     <section class="content">
-      <section>
+      <header class="content__header">
         <h1>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
-        <video src=""></video>
-      </section>
+        <video class="content__header__video" controls muted>
+          <source src="images/zoom_0.mp4" type="video/mp4">
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+        </video>
+      </header> 
     </section>
-     <aside class="aside-container">
-          <div class="buttons">
-            <button class="download">
-              Download
-            </button>
-            <button class="download">
-              <img src="" alt="">
-            </button>
-            <button class="download">
-              <img src="" alt="">
-            </button>
-            <p>como citar esse trabalho?</p>
-          </div>
-        </aside>
+    <aside class="aside-container">
+      <div class="botoes-container">
+        <button class="botoes-container__laranja">
+          <img src="images/download.png" alt="">
+          Download
+        </button>
+        <button class="botoes-container__laranja">
+          <img src="images/download.png" alt="">
+        </button>
+        <button class="botoes-container__laranja">
+          <img src="images/doi.png" alt="">
+        </button>
+      </div>
+      <div class="aside-container__subtexto">
+        <p>como citar esse trabalho?</p>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <h1 class="card__header__titulo">Detalhes</h1>
+        </div>
+        <div class="card__body">
+          <p class="card__informacoes">
+            Tipo de Apresentação: <strong>Pôster.</strong><br/>
+            Eixo temático: <strong>Alimentação e saúde (<abbr title="Alimentação e Saúde">AS</abbr>).</strong><br/>
+            Palavras-chaves: <strong>Alimentos funcionais, alimentação escolar.</strong><br/>
+          </p>
+
+          <p class="card__informacoes">
+            <strong>Autores:</strong><br/>
+            Galileo Galilei<sup>1</sup><br>
+            Berta Lange de Morretes<sup>2</sup><br>
+            Isaac Newton<sup>3</sup><br>
+            Cesar Lattes<sup>1</sup><br>
+            Stephen Hawking<sup>4</sup><br>
+          </p>   
+
+          <p class="card__informacoes--universidade">
+            <sup>1</sup>Universidade Estadual de Campinas<br>
+            <sup>2</sup>Universidade de São Paulo<br>
+            <sup>3</sup>Instituto Nacional de Pesquisas Espaciais<br>
+            <sup>4</sup>Universidade Federal do Rio de Janeiro<br>
+          </p>
+        </div>
+      </div>
+    </aside>
+
+     
   </main>
 
-<script>
-    // Get the container element
-  var UlContainer = document.getElementById("side-menu__bar");
+  <script>
+      // Get the container element
+    var UlContainer = document.getElementById("side-menu__bar");
 
-  // Get all buttons with class="btn" inside the container
-  var listSelected = UlContainer.getElementsByClassName("side-menu__item");
+    // Get all buttons with class="btn" inside the container
+    var listSelected = UlContainer.getElementsByClassName("side-menu__item");
 
-  // Loop through the buttons and add the active class to the current/clicked button
-  for (var i = 0; i < listSelected.length; i++) {
-    listSelected[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("side-menu__item--active");
-      current[0].className = current[0].className.replace(" side-menu__item--active", "");
-      this.className += " side-menu__item--active";
-    });
-  }
-</script>
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < listSelected.length; i++) {
+      listSelected[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("side-menu__item--active");
+        current[0].className = current[0].className.replace(" side-menu__item--active", "");
+        this.className += " side-menu__item--active";
+      });
+    }
+  </script>
 </body>
 </html>
