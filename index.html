@@ -133,7 +133,39 @@
       </div>
     </aside>
 
-     
+    <div class="card-resumo">
+      <div class="card-resumo__header">
+        <h2>Resumo</h2>
+      </div>
+      <div class="card-resumo__texto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. <span id="pontos">...</span><span id="mais">Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  leo condimentum lobortis et non lorem. Sed id nisl metus. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo 
+        Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metu
+        condimentum lobortis et non lorem. Sed id nisl metu   Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant</span>
+        <button onclick="verMais()" id="meuBtn">
+          ver mais
+        </button></p>
+      </div>
+    </div>
+
+    <div class="card-discussoes">
+      <div class="card-discussoes__header">
+        <h2>Discussões</h2>
+      </div>
+      <div class="card-discussoes__body">
+        <p>
+          Compartilhe suas ideias ou dúvidas com os autores!
+        </p>
+        <img src="images/icone1.png" alt="">
+        <img src="images/icone2.png" alt="">
+        <img src="images/icone3.png" alt="">
+        <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+        <div class="linha"></div>
+        <button>
+          <img src="images/icon-plus.png" alt="">
+          criar tópico
+        </button>
+      </div>
+    </div>
   </main>
 
   <script>
@@ -152,5 +184,23 @@
       });
     }
   </script>
+  <script>
+    function verMais() {
+      var pontos = document.getElementById("pontos");
+      var maisTexto = document.getElementById("mais");
+      var btnTexto = document.getElementById("meuBtn");
+
+      if (pontos.style.display === "none") {
+        pontos.style.display = "inline";
+        btnTexto.innerHTML = "Ver mais"; 
+        maisTexto.style.display = "none";
+      } else {
+        pontos.style.display = "none";
+        btnTexto.innerHTML = "Ver menos"; 
+        maisTexto.style.display = "inline";
+      }
+    }
+  </script>
+
 </body>
 </html>
