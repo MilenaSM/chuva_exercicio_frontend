@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>13 slaca</title>
+</head>
+<body>
+  <main class="principal-container">
+    <header class="header-container">
+      <div class="header-container__titles">
+        <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+        <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
+        <p>ISSN: 1234-5678</p>
+      </div>
+      <!-- alterar nome da class -->
+      <div class="header-container__menu">
+        <!-- remover bootstrap -->
+        <select class="selectpicker" data-width="fit">
+          <option data-content='<span class="flag-icon flag-icon-us"></span> English'>
+            English
+          </option>
+        <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>
+          Español
+        </option>
+      </select>
+        <div class="header-container__login">
+          <div>
+            <p class="header-container__welcome">
+              Bem vindo!
+            </p>
+            <p class="header-container__email">
+              alguem12@galoascience.com
+            </p>
+          </div>
+          <div class="header-container__notification__badge">
+            <span>
+              2
+            </span>   
+          </div>
+          <img src="/images/image.png" alt="profile image">
+        </div>
+      </div>
+    </header>
+
+    <div class="side-menu">
+      <header>
+        <h1>slaca 2019</h1>
+      </header>
+      <div>
+        <img src="/images/dewey 4.png" alt="SLACA 2019">
+      </div>
+      <ul id="side-menu__bar">
+        <li id="apresentacao" class="side-menu__item">
+          Apresentação
+        </li>
+        <li id="comites" class="side-menu__item">
+          Comitês
+        </li>
+        <li id="autores" class="side-menu__item">
+          Autores
+        </li>
+        <li id="eixos-tematicos" class="side-menu__item">
+          Eixos temáticos
+        </li>
+        <li id="trabalhos" class="side-menu__item side-menu__item--active">
+          Trabalhos
+        </li>
+        <li id="contato" class="side-menu__item">
+          Contato
+        </li>
+      </ul>
+    </div>
+
+    <section class="content">
+      <section>
+        <h1>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
+        <video src=""></video>
+      </section>
+    </section>
+     <aside class="aside-container">
+          <div class="buttons">
+            <button class="download">
+              Download
+            </button>
+            <button class="download">
+              <img src="" alt="">
+            </button>
+            <button class="download">
+              <img src="" alt="">
+            </button>
+            <p>como citar esse trabalho?</p>
+          </div>
+        </aside>
+  </main>
+
+<script>
+    // Get the container element
+  var UlContainer = document.getElementById("side-menu__bar");
+
+  // Get all buttons with class="btn" inside the container
+  var listSelected = UlContainer.getElementsByClassName("side-menu__item");
+
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < listSelected.length; i++) {
+    listSelected[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("side-menu__item--active");
+      current[0].className = current[0].className.replace(" side-menu__item--active", "");
+      this.className += " side-menu__item--active";
+    });
+  }
+</script>
+</body>
+</html>
