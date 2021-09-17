@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +17,7 @@
         <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
         <p>ISSN: 1234-5678</p>
       </div>
-      <!-- alterar nome da class -->
       <div class="header-container__menu">
-        <!-- remover bootstrap -->
         <select class="selectpicker" data-width="fit">
           <option data-content='<span class="flag-icon flag-icon-us"></span> English'>
             English
@@ -84,7 +82,7 @@
         <h1>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
         <img class="content__header__video" src="images/video.png" alt="">
 
-        <!-- Caso tenha algum vídeo para teste -->
+        <!-- tag video -->
         <!-- <video class="content__header__video" controls muted>
           <source src="movie.mp4" type="video/mp4">
           <source src="movie.ogg" type="video/ogg">
@@ -137,7 +135,7 @@
       </div>
     </aside>
 
-    <div class="card-resumo">
+    <section class="card-resumo">
       <div class="card-resumo__header">
         <h2>Resumo</h2>
       </div>
@@ -149,7 +147,7 @@
           ver mais
         </button></p>
       </div>
-    </div>
+    </section>
 
     <div class="card-discussoes">
       <div class="card-discussoes__header">
@@ -173,14 +171,13 @@
           </button>
         </div>  
 
-        <div id="criar-topico" class="card__novo-topico">
+        <section id="criar-topico" class="card__novo-topico">
           <form name="meu_form" class="card__novo-topico__form">
 
             <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
             
             <label for="assunto">Assunto</label>
             <input type="text" id="assunto-id" placeholder="Defina um tópico sucinto para notificar os autores..." required="required" name="assunto" />
-            
             
             <label for="conteudo">Conteúdo</label>
               <textarea name="conteudo" type="textarea" id="conteudo-id"></textarea>
@@ -196,7 +193,7 @@
               <input type="submit" class="enviar" id="enviar" onclick="ocultarDiv();" value="Enviar" />
             </div>
           </form>
-        </div>  
+        </section>  
 
         <div id="discussoes-enviado" class="card-discussoes__topico">
           <p>
@@ -207,7 +204,6 @@
           <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="criarTopico();">
             criar novo tópico
           </button>
-
                       
           <div class="feedback-container" id="feedback">
             <img src="images/confirma.png" alt="confirmação">
@@ -215,7 +211,6 @@
             <a class="feedback-container__link" href="#">Editar tópico</a>
           </div>
         </div>  
-
 
         <div class="card-topico-container">     
           <div class="card-topico">

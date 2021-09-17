@@ -1,3 +1,4 @@
+// Interatividade com side-menu
 let UlContainer = document.getElementById("side-menu__bar");
 
 let listSelected = UlContainer.getElementsByClassName("side-menu__item");
@@ -10,6 +11,7 @@ for (let i = 0; i < listSelected.length; i++) {
   });
 }
 
+// botão ver mais/ver menos
 function verMais() {
   let pontos = document.getElementById("pontos");
   let maisTexto = document.getElementById("mais");
@@ -26,6 +28,7 @@ function verMais() {
   }
 }
 
+// Funções para alternar as divs
 function toggle() {
   let discussoesDiv = document.getElementById("discussoes");
   let criarTopico = document.getElementById("criar-topico");
