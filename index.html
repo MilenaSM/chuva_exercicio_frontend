@@ -80,24 +80,26 @@
     <section class="content">
       <header class="content__header">
         <h1>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
-        <video class="content__header__video" controls muted>
-          <source src="images/zoom_0.mp4" type="video/mp4">
-          <!-- <source src="movie.ogg" type="video/ogg"> -->
-        Your browser does not support the video tag.
-        </video>
+        <img class="content__header__video" src="images/video.png" alt="">
+
+        <!-- Caso tenha algum vídeo para teste -->
+        <!-- <video class="content__header__video" controls muted>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        </video> -->
       </header> 
     </section>
     <aside class="aside-container">
       <div class="botoes-container">
         <button class="botoes-container__laranja">
-          <img src="images/download.png" alt="">
+          <img src="images/download.png" alt="Download">
           Download
         </button>
         <button class="botoes-container__laranja">
-          <img src="images/estrela.png" alt="">
+          <img src="images/estrela.png" alt="Favoritar">
         </button>
         <button class="botoes-container__laranja">
-          <img src="images/doi.png" alt="">
+          <img src="images/doi.png" alt="Botão">
         </button>
       </div>
       <div class="aside-container__subtexto">
@@ -152,79 +154,126 @@
         <h2>Discussões</h2>
       </div>
       <div class="card-discussoes__body">
-        <p>
-          Compartilhe suas ideias ou dúvidas com os autores!
-        </p>
-        <div class="card-discussoes__images">
-          <img src="images/icone1.png" alt="">
-          <img src="images/icone2.png" alt="">
-          <img src="images/icone3.png" alt="">
-        </div>
-        <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
-        <div class="linha"></div>
-        <button class="card-discussoes__botao botoes-container__laranja">
-          <img src="images/icon-plus.png" alt="Crie seu tópico">
-          criar tópico
-        </button>
-        
-        <div class="card-topico">
-          <div class="card-topico__header">
-            <h2>Assunto da pergunta aparece aqui</h2>
-            <span>Carlos Genrique Santos</span>
+        <div id="discussoes" class="card-discussoes__topico">
+          <p>
+            Compartilhe suas ideias ou dúvidas com os autores!
+          </p>
+          <div class="card-discussoes__images">
+            <img src="images/icone1.png" alt="">
+            <img src="images/icone2.png" alt="">
+            <img src="images/icone3.png" alt="">
           </div>
-          <div class="card-topico__body">
-            <p>
-              Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
-            </p>
-            <div class="card-topico__imagens">
-              <button class="botoes-container__laranja--sem-fundo">
-                <img src="images/mais informações.png" alt="">
-              </button>
-              <button class="botoes-container__laranja">
-                <img src="images/green apples 22.png" alt="">
-              </button>
-              <span>1 like</span>
-              <span>1 resposta</span>
-            </div>  
+          <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+          <div class="linha"></div>
+          <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="ocultarDiv();">
+            <img src="images/icon-plus.png" alt="Crie seu tópico">
+            criar tópico
+          </button>
+        </div>  
+
+        <div id="criar-topico" class="card__novo-topico">
+          <form name="meu_form" class="card__novo-topico__form">
+
+            <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+            
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto-id" placeholder="Defina um tópico sucinto para notificar os autores..." required="required" name="assunto" />
+            
+            
+            <label for="conteudo">Conteúdo</label>
+              <textarea name="conteudo" type="textarea" id="conteudo-id"></textarea>
+            <div class="card__novo-topico__form-box">
+              <div class="card__novo-topico__container-botoes">
+                <button type="button" class="card__novo-topico__botoes">
+                  <img src="images/Shape.png" alt="">
+                </button>
+                <button type="button" class="card__novo-topico__botoes">
+                  <img src="images/Shape-2.png" alt="">
+                </button>
+              </div>
+              <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+            </div>
+          </form>
+        </div>  
+
+        <div id="discussoes-enviado" class="card-discussoes__topico">
+          <p>
+            Seu tópico foi enviado com sucesso! :D
+          </p>
+          <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+          <div class="linha"></div>
+          <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="criarTopico();">
+            criar novo tópico
+          </button>
+        </div>  
+
+          
+        <div class="modal" id="modal">
+          <img src="" alt="">
+          <p>Aguardando feedback dos autores</p>
+          <a href="#">Editar tópico</a>
+        </div>
+        <div class="card-topico-container">     
+          <div class="card-topico">
+            <div class="card-topico__header">
+              <h2>Assunto da pergunta aparece aqui</h2>
+              <span>Carlos Genrique Santos</span>
+            </div>
+            <div class="card-topico__body">
+              <p>
+                Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+              </p>
+              <div class="card-topico__imagens">
+                <button class="botoes-container__laranja--sem-fundo">
+                  <img src="images/mais informações.png" alt="">
+                </button>
+                <button class="botoes-container__laranja">
+                  <img src="images/green apples 22.png" alt="">
+                </button>
+                <span>1 like</span>
+                <span>1 resposta</span>
+              </div>  
+            </div>
+          </div>
+
+          <div class="card-topico">
+            <div class="card-topico__header">
+              <h2>Assunto da pergunta aparece aqui</h2>
+              <span>Carlos Genrique Santos</span>
+            </div>
+            <div class="card-topico__body">
+              <p>
+                Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+              </p>
+              <div class="card-topico__imagens">
+                <button class="botoes-container__laranja--sem-fundo">
+                  <img src="images/mais informações.png" alt="">
+                </button>
+                <button class="botoes-container__laranja">
+                  <img src="images/green apples 22.png" alt="">
+                </button>
+                <span>1 like</span>
+                <span>1 resposta</span>
+              </div>  
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <footer>
+      <img src="images/logo.png" alt="">
+      <div>
+        <p>
+          <strong>Preservar a memória do evento e ampliar o acesso ao conhecimento científico</strong> gerado em eventos é a razão de ser da plataforma Galoá Proceedings. 
+         </p>
+         <p>
+           Os trabalhos publicados aqui têm maior alcance e ficam disponíveis para toda a comunidade cientifica, mantendo aceso o debate científico fomentado pelos encontros e aumentando o impacto do evento.
+         </p>
+      </div>
+    </footer>
   </main>
 
-  <script>
-      // Get the container element
-    var UlContainer = document.getElementById("side-menu__bar");
-
-    // Get all buttons with class="btn" inside the container
-    var listSelected = UlContainer.getElementsByClassName("side-menu__item");
-
-    // Loop through the buttons and add the active class to the current/clicked button
-    for (var i = 0; i < listSelected.length; i++) {
-      listSelected[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("side-menu__item--active");
-        current[0].className = current[0].className.replace(" side-menu__item--active", "");
-        this.className += " side-menu__item--active";
-      });
-    }
-  </script>
-  <script>
-    function verMais() {
-      var pontos = document.getElementById("pontos");
-      var maisTexto = document.getElementById("mais");
-      var btnTexto = document.getElementById("meuBtn");
-
-      if (pontos.style.display === "none") {
-        pontos.style.display = "inline";
-        btnTexto.innerHTML = "Ver mais"; 
-        maisTexto.style.display = "none";
-      } else {
-        pontos.style.display = "none";
-        btnTexto.innerHTML = "Ver menos"; 
-        maisTexto.style.display = "inline";
-      }
-    }
-  </script>
-
+  <script src="scripts/main.js"></script>
 </body>
 </html>
