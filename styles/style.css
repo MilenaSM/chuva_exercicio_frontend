@@ -21,11 +21,11 @@ footer { grid-area: footer; }
   grid-template-columns: 10% 70% 20%;
   /* grid-template-rows: 50% 40%; */
   grid-template-areas: 
-  'menu header header .' 
-  'menu main right right' 
-  'menu resumo resumo resumo'
-  'menu discussoes discussoes discussoes'
-  'menu footer footer footer';
+  'menu header header . .' 
+  'menu main right right right' 
+  'menu resumo resumo resumo resumo'
+  'menu discussoes discussoes discussoes discussoes'
+  'menu footer footer footer footer';
 }
 /* 
 .principal-container {
@@ -44,7 +44,7 @@ footer { grid-area: footer; }
   justify-content: space-between;  
   align-items: center;
   padding: 30px 20px;
-  width: 100%;
+  width: 115%;
   height: 68px;
   top: 0px;
   color: #725C5C;
@@ -180,18 +180,19 @@ footer { grid-area: footer; }
 }
 
 .content__header__video {
-  width: 100%; 
+  width: 80%; 
   margin: 10px 50px;
   cursor: pointer;
 }
 
 .aside-container {
+  position: relative;
+  right: 25%;
   width: 100%;
-  min-width: 500px;
-  max-width: 900px;
+
   display: flex;
   flex-direction: column;
-  margin: 1rem 2rem 1rem;
+  margin: 1.5rem;
 }
 
 .botoes-container {
@@ -224,7 +225,7 @@ footer { grid-area: footer; }
 }
 
 .card {
-  width: 12vw;
+  width: 40vw;
   border: 1px solid #ECECEC;
 }
 
@@ -235,7 +236,7 @@ footer { grid-area: footer; }
 }
 
 .card__body {
-  height: 610px;
+  height: 310px;
   min-height: 200px;
   padding: 10px;
   overflow-y: scroll;
@@ -417,12 +418,24 @@ footer { grid-area: footer; }
   font-size: 1.1rem;
 }
 
+.feedback-container {
+  text-align: center;
+}
+
+.feedback-container img {
+  padding: 1rem;
+}
+
+.feedback-container__link {
+  color: #ED7839;
+}
+
 .card-topico-container {
   width: 50vw;
 }
 
 .card-topico {
-  width: 74vw;
+  width: 69vw;
   padding: 15px 15px 5px;
   margin: 5px 50px;
   border: 1px solid #ECECEC;
@@ -443,7 +456,13 @@ footer { grid-area: footer; }
   color: #5C5C5C;
 }
 
+.card-topico__body {
+  font-size: 1.2rem;
+  color: #5C5C5C;
+}
+
 .card-discussoes__topico p {
+  text-align: center;
   font-size: 1.2rem;
   color: #4D4D4D;
 }

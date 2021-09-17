@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/responsive.css">
   <title>13 slaca</title>
 </head>
 <body>
@@ -165,7 +167,7 @@
           </div>
           <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
           <div class="linha"></div>
-          <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="ocultarDiv();">
+          <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="toggle();">
             <img src="images/icon-plus.png" alt="Crie seu tópico">
             criar tópico
           </button>
@@ -191,7 +193,7 @@
                   <img src="images/Shape-2.png" alt="">
                 </button>
               </div>
-              <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+              <input type="submit" class="enviar" id="enviar" onclick="ocultarDiv();" value="Enviar" />
             </div>
           </form>
         </div>  
@@ -205,14 +207,16 @@
           <button id="botao-novo-topico" class="card-discussoes__botao botoes-container__laranja" onclick="criarTopico();">
             criar novo tópico
           </button>
+
+                      
+          <div class="feedback-container" id="feedback">
+            <img src="images/confirma.png" alt="confirmação">
+            <p>Aguardando feedback dos autores</p>
+            <a class="feedback-container__link" href="#">Editar tópico</a>
+          </div>
         </div>  
 
-          
-        <div class="modal" id="modal">
-          <img src="" alt="">
-          <p>Aguardando feedback dos autores</p>
-          <a href="#">Editar tópico</a>
-        </div>
+
         <div class="card-topico-container">     
           <div class="card-topico">
             <div class="card-topico__header">

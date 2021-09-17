@@ -26,7 +26,7 @@ function verMais() {
   }
 }
 
-function ocultarDiv() {
+function toggle() {
   let discussoesDiv = document.getElementById("discussoes");
   let criarTopico = document.getElementById("criar-topico");
 
@@ -39,13 +39,12 @@ function ocultarDiv() {
   }
 }
 
-function Enviar() {
+function ocultarDiv() {
   let discussoesEnviado = document.getElementById("discussoes-enviado");
   let criarTopico = document.getElementById("criar-topico");
 
   discussoesEnviado.style.display = "flex"
   criarTopico.style.display = "none"
-
 }
 
 function criarTopico() {
